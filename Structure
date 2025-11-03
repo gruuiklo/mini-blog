@@ -1,0 +1,9 @@
+mini-blog-cli/
+├─ README.md
+├─ .gitignore
+├─ main.py
+├─ src/
+│  ├─ blog.py
+│  └─ storage.py
+└─ data/
+   └─ posts.txt
