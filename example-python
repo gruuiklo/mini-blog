@@ -1,0 +1,27 @@
+
+---
+
+### 🐍 **main.py**
+```python
+import sys
+from src.blog import add_post, read_posts
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python main.py [add/read] [text]")
+        return
+
+    command = sys.argv[1]
+
+    if command == "add":
+        if len(sys.argv) < 3:
+            print("Please provide text for the post.")
+            return
+        add_post(" ".join(sys.argv[2:]))
+    elif command == "read":
+        read_posts()
+    else:
+        print("Unknown command. Use 'add' or 'read'.")
+
+if __name__ == "__main__":
+    main()
